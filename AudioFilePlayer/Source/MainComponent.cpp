@@ -209,6 +209,8 @@ void MainComponent::openButtonClicked()
                     transportSource.setSource(newSource.get(), 0, nullptr, reader->sampleRate);
                     playButton.setEnabled(true);
                     readerSource.reset(newSource.release());
+
+                    changeState(Stopped);
                 }
             }
         });
